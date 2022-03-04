@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="number" name="liczba" placeholder="podaj lizbe"/>
+    <button>oblicz</button>
+    <div class="wynik">tutaj bedzie wynik</div>
+   
+<script>
+   //odowlujemy sie/pobieramy button oraz div a klasie
+   const btn = document.querySelector('button');
+   const divW = document.querySelector('div.wynik');
+
+   //obslugujemy klikanie myszką w przycisk
+   btn.addEventListener('click', function () {
+       //pobieramy wartosc pola input o nazwie liczba
+       const liczbaZInputa = document.querySelector('input[name="liczba"]').
+       value;
+
+       //do diva o klasie wynik dodajemy odpowiednia zawartos
+       if(liczbaZInputa % 2 == 0) {
+           divW.textContent = 'Liczba jest patzysta';
+        }
+       else{
+           divW.textContent = 'liczba nie jest parzysta'}
+
+       
+
+   });
+</script>
+</body>
+</html>
