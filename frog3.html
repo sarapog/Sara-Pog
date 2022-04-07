@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="number" name="liczba1" placeholder="wpisz 1 liczbe">
+        <input type="number" name="liczba2" placeholder="wpisz 2 liczbe">
+        <button>oblicz sume</button>
+        <div class="wynik"></div>
+        <script>
+
+         //pobieramy poszczegolne elementy ze strony
+         const btn = document.querySelector('button');
+         const divW = document.querySelector('div.wynik');
+         const l1 = document.querySelector('input[name="liczba1"]');
+         const l2 = document.querySelector('input[name="liczba2"]');
+
+         //tworzymy funkcje suma
+         const suma = function (p1, p2){
+             return p1 + p2;
+         };
+
+         //przypisujemy obsluge zdarzea klikania w button
+         btn.addEventListener('click',()=>{
+             //pobieramy wartosci pol input
+             const pole1 = l1.value*1;
+             const pole2 = l2.value*1;
+
+             //wywolujemy funkcje suma i jej wynik do diva
+             divW.textContent = 'Suma liczb wynosi: ' + suma(pole1, pole2);
+         });
+        </script>
+    </body>
+
+</html>
