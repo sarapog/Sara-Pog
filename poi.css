@@ -1,0 +1,29 @@
+div:nth-child(1) {
+    
+    text-align: center;
+    background-color: #c0c0c0;
+}
+
+div:nth-child(9) {
+    
+    text-align: center;
+    background-color: #c0c0c0;
+}
+
+
+h1 {
+    color: #ff0000;
+}
+
+h2 {
+    color: #008000;
+}
+
+h3 {
+    color: #008080;
+}
+
+h4 {
+    color: #800080; 
+}
+
