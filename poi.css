@@ -1,18 +1,38 @@
-div:nth-child(1) {
-    
+div:nth-child(8n+1) {
     text-align: center;
     background-color: #c0c0c0;
 }
 
-div:nth-child(9) {
-    
-    text-align: center;
-    background-color: #c0c0c0;
+
+div:nth-child(-2n+6) {
+    text-align: left;
+    background-color: #ff99ff;
 }
 
+div:nth-child(6n+2) {
+    text-align: center;
+    background-color: #ffff99;
+}
+
+div:nth-child(4n+3) { 
+    text-align: right;
+    background-color: #800000;
+}
+
+div#piec {
+    background-color: #00ffff;
+}
+
+
+
+
+h1#piec {
+    color: #000080;
+    text-align: center; 
+}
 
 h1 {
-    color: #ff0000;
+    color: #ff0000; 
 }
 
 h2 {
@@ -25,5 +45,60 @@ h3 {
 
 h4 {
     color: #800080; 
+}
+
+
+
+
+i.zielony {
+    color: #00ff00;
+}
+
+i.niebieski {
+    color: #00ffff;
+}
+
+i.oliwkowy {
+    color: #808000;
+}
+
+i.granatowy {
+    color: #0000ff;
+}
+
+i#piec{
+    color: #ffff00; 
+}
+
+
+
+
+li ol {
+    color: #008000;
+}
+
+
+
+
+a:link {
+    background-color: #000080;
+    color: #00ffff;
+}
+
+a:visited {
+    background-color: #00ffff;
+    color: #000080;
+}
+
+a:hover {
+    background-color: #ff0000; 
+    color: #ffff00;
+    font-size: x-large; 
+    font-style: italic;
+}
+
+a:active{
+    background-color: #000000; 
+    color: #ffffff;
 }
 
