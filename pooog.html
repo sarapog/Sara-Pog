@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="tablica"></div>
+        <div class="suma"></div>
+    <script>
+        const divTablica =  document.querySelector(' .Tablica');
+        const divSuma = document.querySelector()
+        //tworzymy pusta tablice
+        const liczby = [];
+
+        //zapelniamy tbalice losowymi liczbami z zakresu 0-100,
+        //ilosc liczb wynosi 100
+        for(let i = 0; i < 100; i++){
+            liczby[i] = Math.round(Math.random() * 100);
+        }
+
+        //wyswietlam zawartosc tablicy
+        divTablica.textContent = liczby.join(' , ');
+
+        //utwurzmy funkcje ktora obliczy sume tablicy
+        function sumaLiczbTablicy(tab){
+            let suma = 0;
+            tab.forEach((liczba) => {
+                suma += liczba;
+                
+            });
+            return suma;
+            }
+        divSuma.textContent = `suma liczb wynosi: &
+        {sumaLiczbTAblicy((liczby))}`;
+    </script>
+    </body>
+</html>
