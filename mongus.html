@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            h2 {
+                color: rgb(245, 119, 16);
+
+            }
+            div.Tablica {
+                color: rgb(229, 230, 228,);
+                background-image: url(https://pobierak.jeja.pl/images_thumb/3/f/f/214038_600x315.jpg);
+                background-size: 100%;
+            }
+        </style>
+        <title>mongus</title>
+    </head>
     <body>
         <div class="Tablica"></div>
         <div class="Max"></div>
@@ -9,8 +23,8 @@
             const liczby = [];
             //liczby[indeks] = wartosc
 
-            for(let i = 0; i < 100; i++){
-                liczby[i] = Math.round(Math.random() * 100);
+            for(let i = 0; i < 1000000; i++){
+                liczby[i] = Math.round(Math.random() * 100000);
             }
 
             divTablica.innerHTML = `
@@ -21,7 +35,7 @@
             const NajwiekszaLiczba = function(tab){
                 let najwieksza = tab[0];
                 tab.forEach((liczba) => {
-                    if (najwieksza < liczba) najwieksza = liczba;
+                    if (najwieksza > liczba) najwieksza = liczba;
                 });
                 return najwieksza;
             };
