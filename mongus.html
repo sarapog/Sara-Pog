@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="Tablica"></div>
+        <div class="Max"></div>
+        <script>
+            const divTablica = document.querySelector('div.Tablica');
+            const divMax = document.querySelector('div.Max');
+            const liczby = [];
+            //liczby[indeks] = wartosc
+
+            for(let i = 0; i < 100; i++){
+                liczby[i] = Math.round(Math.random() * 100);
+            }
+
+            divTablica.innerHTML = `
+            <h2> zawartosc tablicy </h2>
+            <p>${liczby.join(', ')} </p>
+            `;
+
+            const NajwiekszaLiczba = function(tab){
+                let najwieksza = tab[0];
+                tab.forEach((liczba) => {
+                    if (najwieksza < liczba) najwieksza = liczba;
+                });
+                return najwieksza;
+            };
+            divMax.innerHTML = ` <div>najwieksza liczba to: ${NajwiekszaLiczba(liczby)}`;
+        </script>
+    </body>
+</html>
