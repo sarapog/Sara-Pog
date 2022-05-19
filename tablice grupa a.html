@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Tablica"></div>
+    <div class="Srednia"></div>
+    <div class="imiona"></div>
+    <script>
+        const divTablica = document.querySelector('div.Tablica');
+        const divSrednia = document.querySelector('div.Srednia');
+        const liczby = [];
+        for(let i = 0;i < 1000; i++){
+            liczby[i] = Math.round(Math.random()* 1000)
+        }
+        divTablica.innerHTML = ` <h2> tablica </h2> 
+        <p>${liczby.join(', ')} </p>`;
+
+        const imiona = ['Anna','Ola', 'Maja', 'Mateusz', 'Lilia', 'Anastazja', 'Boguslawa', 'Oliwia', 'Sandra', 'Kinga'];
+        imiona.sort();
+        console.log(imiona);   
+        
+    </script>
+</body>
+</html>
