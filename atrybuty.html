@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px ;
+        }
+
+        .specjalna {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <div class="sekcja">
+        <h2 id="tytul">Lorem, ipsum dolor.</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis beatae rem vitae soluta debitis ab, excepturi ex temporibus vel amet.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis facilis quam quasi perspiciatis nihil quisquam quidem ipsam delectus laudantium sint nobis molestias voluptatibus cum voluptatum minima natus blanditiis ab ducimus tempore, deleniti, nostrum porro! Modi corrupti quo iusto, laborum qui, fugit voluptates, molestias eum non ex molestiae minima ratione ea!
+        </p>
+    </div>
+    <img src="https://cdn.pixabay.com/photo/2022/08/16/06/42/insect-7389497_960_720.jpg" alt="">
+
+
+    
+    <script>
+        //pobieramy nagłówek h1
+        const naglowekGlowny = document.querySelector('h1');
+        //pobieramy diva o klasie sekcja
+        const divSekcja = document.querySelector('div.sekcja');
+        //pobiermay naglowek h2 o id tytul
+        const naglowekPoboczny = document.querySelector('#tytul');
+        //lub
+        //const naglowekPoboczny = document.getElementById('tytul');
+        //pobieramy akapity
+        const akapity = document.querySelectorAll('p');
+
+
+        //zmienimy zawartosci pierwszego akapitu
+        //akapity [0].innerText = 'tak lub nie byc moze';
+        akapity [0].innerHTML = '<strong> tak lub nie byc moze </strong>';
+
+        //zmieniamy atrybutsrc dla obrazka
+        const obrzek = document.querySelector('img');
+        //obrzek.setAttribute('src', 'https://cdn.pixabay.com/photo/2014/11/21/17/27/frog-540812_960_720.jpg');
+
+        obrzek.src = 'https://cdn.pixabay.com/photo/2014/11/21/17/27/frog-540812_960_720.jpg';
+
+        //zmienimy style naglowka h1
+        naglowekGlowny.style.color = 'blue';
+        naglowekGlowny.style.fontFamily = 'Arial';
+
+        //dodajemy do wszytkich akapitow klase specjalna
+        //akapity[0].classList.add('specjalna');
+        //akapity[1].classList.add('specjalna');
+        akapity.forEach((akapit) => {
+            akapit.classList.add('specjalna');
+        });
+
+        //usuwamy obrazek ze strony
+        obrzek.remove();
+
+        //dodajmy nowy obrazek
+        const nowyObrazek = document.createElement('img');
+        nowyObrazek.setAttribute('src', 'https://cdn.pixabay.com/photo/2022/08/16/06/42/insect-7389497_960_720.jpg');
+        document.body.appendChild(nowyObrazek);
+
+    </script>
+</body>
+</html>
