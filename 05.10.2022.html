@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <div>
+            <input type="text" name="login" placeholder="podaj login">
+            <div class="error"></div>
+        </div>
+        <div>
+            <input type="password" name="haslo" placeholder="podaj haslo">
+            <div class="error"></div>
+        </div>
+        <input type="submit" value="zaloguj">
+    </form>
+    <div class="logowanie"></div>
+
+    <script>
+        //pobieramy potrzebne elemnty html
+        const formularz = document.querySelector('form');
+        const poleLogin = document.querySelector('input[name="login"]');
+        const poleHaslo = document.querySelector('input[name="haslo"]');
+        const divError = document.querySelectorAll('.error');
+        const divLog = document.querySelector('.logowanie');
+
+        const czyJestBlad = false;
+
+        //funkcja walidujaca pole login 
+        const walidacjaLogin = function(l){
+            //sprawdzamy czy pole nie jest uzupełnione 
+            if(l == ""){
+                czyJestBlad = true;
+                return 'uzupelnij pole login'
+            }
+            //sprawdzamy czy login sklada sie tylko z liter i cyfr
+            const wzorLogin = /^[a-zA-Z0-9]{3,}$/;
+            if(!wzorLogin.test(l)){
+                return ' login musi miec przynajmniej 3 znaki (litery, cyfry)';
+            }
+
+            czyJestBlad = false;
+
+        };
+
+        //funkcja walidujaca moje haslo
+        const walidacjaHasla = function(h){
+            if (h.length < 8) {
+                czyJestBlad = true;
+                return 'haslo  musi miec wiecej niz 8 znakow';
+            }
+            czyJestBlad = false;
+        };
+
+        //obslugujemy zdarzenie submit ( klikniecie w przycis) formularza
+        formularz.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            divLog.innerHTML = ''
+
+            //do zmiennych przypisujemy wartosc pola login i pola haslo
+            const login = poleLogin.value;
+            const haslo = poleHaslo.value;
+
+            //w przygotowanych divach wyswietlamy błedy
+            divError[0].textContent = walidacjaLogin(login);
+            divError[1].textContent = walidacjaHasla(haslo);
+
+            if(czyJestBlad == false){
+            divLog.innerHTML = '<h3> zalogowano </h3>'
+            }
+        });
+
+
+
+    </script>
+    
+</body>
+</html>
