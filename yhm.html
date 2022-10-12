@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <h1>Lorem, ipsum dolor.</h1>
+    <h1>Lorem, ipsum dolor.</h1>
+    <h2>Lorem, ipsum dolor.</h2>
+    <h2>Lorem, ipsum dolor.</h2>
+    <h2>Lorem, ipsum dolor.</h2>
+    <p class="js">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repudiandae accusamus unde, quisquam est explicabo officia reprehenderit atque a. Fugiat.</p>
+    <p class="jq">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repudiandae accusamus unde, quisquam est explicabo officia reprehenderit atque a. Fugiat.</p>
+    <script>
+        //zwykly javascript
+        document.querySelector('h1').textContent = 'Nowa tresc naglowak dodana w JavaScript';
+        document.querySelector('p.js').style.color = 'red';
+        document.querySelectorAll('h1').forEach((h) => {
+            h.textContent = 'Nowa tresc naglowka w JavaScript';
+        });
+        document.querySelector('p.js').classList.add('zmiana');
+
+        //jQuery 
+        $('h2').text('nowa tresc naglowak w jq');
+        $('p.jq').css('color', 'blue');
+        $('p.jq').addClass('zmiana');
+        $('p.zmiana').css('background-color', 'black');
+    </script>
+    
+</body>
+</html>
