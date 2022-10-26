@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body {
+            display: flex;
+        }
+        section {
+            margin: 50px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            display: none;
+
+        }
+        .red {
+            background-color: red;
+        }
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <div class="red"></div>
+    <button class="btn-red">kliknij tutaj</button>
+</section>
+<section>
+    <div class="blue"></div>
+    <button class="btn-blue">kliknij tutaj</button>
+</section>
+
+<script>
+    $('button.btn-red').click(function(){
+      //  $('div.red').hide(1000);
+      //$('div.red').show(1000);
+      $('div.red').slideDown(1000);
+
+    });
+
+    $('button.btn-blue').click(function(){
+     //   $('div.blue').fadeOut(1000);
+    // $('div.blue').fadeI(1000);
+    $('div.blue').slideUp(1000);
+    });
+</script>
+
+    
+</body>
+</html>
