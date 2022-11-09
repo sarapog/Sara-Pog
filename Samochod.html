@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Samochod.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //twozymy kilka obiektow na podstawei klasy Samochod
+        const auto1 = new Samochod('Nissan', '350Z', 35000, 2006, 1);
+        const auto2 = new Samochod('Kia', 'Ceed', 30000, 2005, 10);
+        const auto3 = new Samochod('Łada', 'Nivia', 10000, 1990, 12);
+
+        const div = document.createElement('div');
+        document.body.appendChild(div);
+        div.innerHTML = '<p> Marka samochodu: ' + auto1.marka + '</p>';
+        div.innerHTML += '<p> Model samochodu: ' + auto1.model + '</p>';
+        div.innerHTML += '<p> Wiek samochodu: ' + auto1.wiek() + '</p>';
+    </script>
+    
+    
+</body>
+</html>
