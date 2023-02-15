@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            
+        }
+
+        canvas {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid black;
+            background-color: rgb(181, 250, 250);
+        }
+    </style>
+</head>
+<body>
+    <canvas width="1200" height="800"></canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+
+        //ctx.fillRect(50, 50, 100, 100);
+       // ctx.fillStyle = 'red';
+       // ctx.fillStyle(65, 65, 100, 100);
+       let x = canvas.width / 2;
+       let y = canvas.height / 2;
+       const h = 60;
+       const fps = 100;
+       let lastTime = 0;
+       let speedX = 10;
+       let speedY = 50;
+
+       //function animacja() {
+       //    ctx.clearRect(0, 0, canvas.width, canvas.height); // wyczyszcza caly canvas
+       //    x += -2;
+       //    y += 1;
+       //    ctx.fillRect(x - h / 2, y - h / 2, h, h);
+      // }
+      // setInterval(animacja, 1000 /fps);
+
+      //function animacja(time) {
+          //requestAnimationFrame(animacja);
+          //if (time - lastTime >= 1000 / fps){
+          //  ctx.clearRect(0, 0, canvas.width, canvas.height); // wyczyszcza caly canvas
+          // x += speedX;
+          // y += speedY;
+          // ctx.fillRect(x - h / 2, y - h / 2, h, h);
+
+          // if(x >= canvas.width - h / 2)
+          // speedX = -speedX;
+
+         ///  if(x <= 0 + h /2)
+          // speedX = -speedX;
+
+          // if(y <= 0 + h /2)
+          // speedY = -speedY;
+
+          // if(y >= canvas.height - h / 2)
+          // speedY = -speedY;
+
+           
+           
+        //  }
+    //  }
+
+     //  animacja();
+
+
+     ctx.beginPath();
+    ctx.arc(590,430,100,0,10*Math.PI);
+    ctx.fillStyle="white";
+     ctx.fill();
+
+     ctx.beginPath();
+    ctx.arc(600,650,150,0,10*Math.PI);
+    ctx.fillStyle="white";
+     ctx.fill();
+
+     ctx.beginPath();
+    ctx.arc(550,400,8,0,10*Math.PI);
+    ctx.fillStyle="black";
+     ctx.fill();
+
+     ctx.beginPath();
+    ctx.arc(650,400,8,0,10*Math.PI);
+    ctx.fillStyle="black";
+     ctx.fill();
+
+     ctx.beginPath();
+    ctx.arc(600,430,8,0,10*Math.PI);
+    ctx.fillStyle="orange";
+     ctx.fill();
+
+     ctx.beginPath();
+    ctx.arc(600,550,8,0,10*Math.PI);
+    ctx.fillStyle="black";
+     ctx.fill();
+
+     ctx.beginPath();
+    ctx.arc(600,630,8,0,10*Math.PI);
+    ctx.fillStyle="black";
+     ctx.fill();
+
+     ctx.beginPath();
+    ctx.arc(600,710,8,0,10*Math.PI);
+     ctx.fill();
+
+    // ctx.fillRect(750, 450, 5, 170);
+
+    ctx.beginPath();
+    ctx.moveTo(600,300);
+    ctx.lineTo(700,50);
+    ctx.fill();
+
+
+
+
+
+  
+
+
+
+    </script>
+</body>
+</html>
