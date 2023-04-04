@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(173, 173, 173);
+        }
+    </style>
+</head>
+<body>
+    <div class="tak"></div>
+    <button class="ok">k</button>
+    <script>
+        const btn =document.querySelector('.ok')
+        const divTak = document.querySelector('.tak')
+
+        function getData(){
+        fetch("https://www.boredapi.com/api/activity")
+        // .then(request => console.log(request))
+        .then(request => request.json())
+        .then((data) => {
+            // console.log(data)
+            showData(data)
+            // pokazAktywnosc(data)
+        })
+        
+    }
+
+        function showData(data){
+            console.log(data.activity);
+            divTak.textContent = data.activity
+            // const aktywnosc = data
+
+        }
+btn.addEventListener("click",getData)
+        
+    </script>
+</body>
+</html>
